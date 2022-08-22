@@ -1,0 +1,76 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Team Widget\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-08-17 15:27+0000\n"
+"PO-Revision-Date: 2022-08-17 15:29+0000\n"
+"Last-Translator: \n"
+"Language-Team: Español de Colombia\n"
+"Language: es_CO\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.6.2; wp-6.0.1\n"
+"X-Domain: team-widget"
+
+#: admin/class-team-widget-cpt.php:31
+#, php-format
+msgid "Add New %s"
+msgstr "Agregar Nuevo %s"
+
+#: admin/class-team-widget-cpt.php:35
+#, php-format
+msgid "All %s"
+msgstr "Todos los %s"
+
+#: admin/class-team-widget-cpt.php:32
+#, php-format
+msgid "Edit %s"
+msgstr "Editar %s"
+
+#. Author URI of the plugin
+msgid "https://gitlab.com/slrondonm"
+msgstr ""
+
+#. URI of the plugin
+msgid "https://gitlab.com/slrondonm/team-widget"
+msgstr ""
+
+#: admin/class-team-widget-cpt.php:30
+#, php-format
+msgid "New %s"
+msgstr "Nuevo %s"
+
+#: admin/class-team-widget-cpt.php:34
+#, php-format
+msgid "Search %s"
+msgstr "Buscar %s"
+
+#. Author of the plugin
+msgid "Sergio Lankaster Rondón Melo"
+msgstr ""
+
+#. Name of the plugin
+msgid "Team Widget"
+msgstr ""
+
+#: admin/class-team-widget-admin.php:110
+msgid "Team Widget Options"
+msgstr ""
+
+#: admin/class-team-widget-admin.php:109
+msgid "Team Widget Test Options"
+msgstr ""
+
+#. Description of the plugin
+msgid ""
+"This is a short description of what the plugin does. It's displayed in the "
+"WordPress admin area."
+msgstr ""
+
+#: admin/class-team-widget-cpt.php:33
+#, php-format
+msgid "View %s"
+msgstr "Ver %s"
