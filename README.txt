@@ -1,9 +1,6 @@
 === Team Widget ===
 Contributors: cynipca
-Donate link: https://gitlab.com/slrondonm
-=======
-Donate link: https://github.com/slrondonm
->>>>>>> 89f9f7efaca5289e51268918999d938b2171dad5
+Donate link: https://www.paypal.com/donate/?hosted_button_id=RLCU7XQ46FA6N
 Tags: plugin, comments, spam
 Requires at least: 3.0.1
 Tested up to: 3.4
