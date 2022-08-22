@@ -73,11 +73,15 @@ if ( is_admin() ) {
 		require_once $dir_path . '/includes/plugin-update-checker/plugin-update-checker.php';
 	}
 
-	$MyUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
-		'https://github.com/slrondonm/' . TEAM_WIDGET_NAME . '/team-widget.json',
+	$my_update_checker = Puc_v4_Factory::buildUpdateChecker(
+		'https://github.com/slrondonm/' . TEAM_WIDGET_NAME,
 		__FILE__,
 		TEAM_WIDGET_NAME
 	);
+
+	// Set the branch that contains the stable release.
+	$my_update_checker->setBranch( 'main' );
+
 }
 
 /**
