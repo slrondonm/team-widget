@@ -13,7 +13,6 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	die( '-1' );
 }
-
 /**
  * Undocumented class
  */
@@ -69,7 +68,6 @@ class Team_Widget_CPT {
 			'supports'        => ( isset( $fields['supports'] ) ) ? $fields['supports'] : array(
 				'title',
 				'thumbnail',
-				// 'custom-fields',
 			),
 			'menu_position'   => ( isset( $fields['menu_position'] ) ) ? $fields['menu_position'] : 21,
 			'menu_icon'       => ( isset( $fields['menu_icon'] ) ) ? $fields['menu_icon'] : 'dashicons-admin-generic',
@@ -97,82 +95,5 @@ class Team_Widget_CPT {
 		foreach ( $post_types_fields as $fields ) {
 			$this->register_single_cpt( $fields );
 		}
-	}
-
-	/**
-	 * Undocumented function
-	 *
-	 * @return void
-	 */
-	public function create_metabox() {
-		add_meta_box(
-			'team_widget_box',
-			__( 'Team Widget Content', 'team-widget' ),
-			array( $this, 'metabox_fields' ),
-			'team-widget',
-			'normal',
-			'default',
-		);
-	}
-
-	/**
-	 * Undocumented function
-	 *
-	 * @return mixed
-	 */
-	public function metabox_fields() {
-
-		global $post;
-
-		wp_nonce_field( basename( __FILE__ ), 'team_widget_nonce' );
-
-		$stored_meta = get_post_meta( $post->ID );
-
-		include_once plugin_dir_path( __FILE__ ) . 'partials/team-widget-admin-display.php';
-	}
-
-	/**
-	 * Undocumented function
-	 *
-	 * @return void
-	 */
-	public function save_metabox() {
-		// Post.
-		global $post;
-
-		if ( ! current_user_can( 'edit_post' ) ) {
-			return;
-		}
-
-		update_post_meta(
-			'team_widget_box',
-			'employment',
-			! empty( $_POST['employment'] ),
-		);
-
-		update_post_meta(
-			'team_widget_box',
-			'department',
-			! empty( $_POST['department'] ),
-		);
-
-		update_post_meta(
-			'team_widget_box',
-			'description',
-			! empty( $_POST['description'] ),
-		);
-
-		update_post_meta(
-			'team_widget_box',
-			'email',
-			! empty( $_POST['email'] ),
-		);
-
-		update_post_meta(
-			'team_widget_box',
-			'contact_no',
-			! empty( $_POST['contact_no'] ),
-		);
-
 	}
 }

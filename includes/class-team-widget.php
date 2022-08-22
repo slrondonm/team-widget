@@ -128,6 +128,7 @@ class Team_Widget {
 		require_once $dir . '/admin/class-team-widget-admin.php';
 
 		require_once $dir . '/admin/class-team-widget-cpt.php';
+		require_once $dir . '/admin/class-team-widget-metabox.php';
 
 		/**
 		 * The class responsible for defining all actions that occur in the public-facing
@@ -175,13 +176,17 @@ class Team_Widget {
 
 		$plugin_cpt = new Team_Widget_CPT();
 
+		$plugin_metabox = new Team_Widget_Metabox();
+
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_styles' );
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_scripts' );
 
 		// Add Admin page.
 		$this->loader->add_action( 'admin_menu', $plugin_admin, 'add_admin_menu' );
 		$this->loader->add_action( 'init', $plugin_cpt, 'create_cpt', 999 );
-		$this->loader->add_action( 'add_meta_boxes', $plugin_cpt, 'create_metabox' );
+		$this->loader->add_action( 'add_meta_boxes', $plugin_metabox, 'add_metabox' );
+		$this->loader->add_action( 'save_post', $plugin_metabox, 'save_fields' );
+
 	}
 
 	/**
