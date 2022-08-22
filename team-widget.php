@@ -8,14 +8,14 @@
  * that starts the plugin.
  *
  * @link              https://gitlab.com/slrondonm
- * @since             1.0.0
+ * @since             1.2.1
  * @package           Team_Widget
  *
  * @wordpress-plugin
  * Plugin Name:       Team Widget
  * Plugin URI:        https://gitlab.com/slrondonm/team-widget
  * Description:       This is a short description of what the plugin does. It's displayed in the WordPress admin area.
- * Version:           1.0.0
+ * Version:           1.2.1
  * Author:            Sergio Lankaster Rondón Melo
  * Author URI:        https://gitlab.com/slrondonm
  * License:           GPL-2.0+

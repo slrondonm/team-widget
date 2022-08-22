@@ -1,6 +1,9 @@
 === Team Widget ===
 Contributors: cynipca
 Donate link: https://gitlab.com/slrondonm
+=======
+Donate link: https://github.com/slrondonm
+>>>>>>> 89f9f7efaca5289e51268918999d938b2171dad5
 Tags: plugin, comments, spam
 Requires at least: 3.0.1
 Tested up to: 3.4
@@ -66,6 +69,14 @@ directory take precedence. For example, `/assets/screenshot-1.png` would win ove
 2. This is the second screen shot
 
 == Changelog ==
+
+= 1.2.1 =
+* A change since the previous version.
+* Another change.
+
+= 1.0.1 =
+* A change since the previous version.
+* Another change.
 
 = 1.0 =
 * A change since the previous version.
