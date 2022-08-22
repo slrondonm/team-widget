@@ -74,7 +74,7 @@ if ( is_admin() ) {
 	}
 
 	$MyUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
-		'https://github.com/slrondonm/' . TEAM_WIDGET_NAME,
+		'https://github.com/slrondonm/' . TEAM_WIDGET_NAME . '/team-widget.json',
 		__FILE__,
 		TEAM_WIDGET_NAME
 	);
