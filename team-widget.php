@@ -8,7 +8,7 @@
  * that starts the plugin.
  *
  * @link              https://gitlab.com/slrondonm
- * @since             1.0.1
+ * @since             1.2.1
  * @package           Team_Widget
  *
  * @wordpress-plugin
