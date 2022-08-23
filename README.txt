@@ -3,7 +3,7 @@ Contributors: cynipca
 Tags: plugin, elementor
 Donate link: https://www.paypal.com/donate/?hosted_button_id=RLCU7XQ46FA6N
 Requires at least: 5.0
-Tested up to: 5.6
+Tested up to: 6.0
 Requires PHP: 7.0
 Stable tag: 1.2.1
 License: GPLv2 or later

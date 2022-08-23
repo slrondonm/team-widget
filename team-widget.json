@@ -1,27 +1,27 @@
 {
-    "name": "Team Widget",
-    "version": "1.0.0",
-    "download_url": "https://github.com/slrondonm/team-widget",
+  "name": "Team Widget",
+  "version": "1.2.1",
+  "download_url": "https://github.com/slrondonm/team-widget",
 
-    "homepage": "https://github.com/slrondonm/team-widget",
-    "requires": "4.5",
-    "tested": "4.8",
-    "last_updated": "2022-08-21 16:17:00",
-    "upgrade_notice": "Here's why you should upgrade...",
+  "homepage": "https://github.com/slrondonm/team-widget",
+  "requires": "5.0",
+  "tested": "6.0",
+  "last_updated": "2022-08-21 16:17:00",
+  "upgrade_notice": "Here's why you should upgrade...",
 
-    "author": "Sergio Rondón",
-    "author_homepage": "https://github.com/slrondonm",
+  "author": "Sergio Rondón",
+  "author_homepage": "https://github.com/slrondonm",
 
-    "sections": {
-        "description": "(Required) Plugin description. Basic HTML can be used in all sections.",
-        "installation": "(Recommended) Installation instructions.",
-        "changelog": "(Recommended) Changelog. <p>This section will be displayed by default when the user clicks 'View version x.y.z details'.</p>",
-        "custom_section": "This is a custom section labeled 'Custom Section'."
-    },
+  "sections": {
+    "description": "(Required) Plugin description. Basic HTML can be used in all sections.",
+    "installation": "(Recommended) Installation instructions.",
+    "changelog": "(Recommended) Changelog. <p>This section will be displayed by default when the user clicks 'View version x.y.z details'.</p>",
+    "custom_section": "This is a custom section labeled 'Custom Section'."
+  },
 
-    "rating": 90,
-    "num_ratings": 123,
+  "rating": 90,
+  "num_ratings": 123,
 
-    "downloaded": 1234,
-    "active_installs": 12345
+  "downloaded": 1234,
+  "active_installs": 12345
 }

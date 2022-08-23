@@ -5,7 +5,7 @@
  * Loads and defines the internationalization files for this plugin
  * so that it is ready for translation.
  *
- * @link       https://gitlab.com/slrondonm
+ * @link       https://github.com/slrondonm
  * @since      1.0.0
  *
  * @package    Team_Widget

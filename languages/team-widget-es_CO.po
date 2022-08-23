@@ -31,11 +31,11 @@ msgid "Edit %s"
 msgstr "Editar %s"
 
 #. Author URI of the plugin
-msgid "https://gitlab.com/slrondonm"
+msgid "https://github.com/slrondonm"
 msgstr ""
 
 #. URI of the plugin
-msgid "https://gitlab.com/slrondonm/team-widget"
+msgid "https://github.com/slrondonm/team-widget"
 msgstr ""
 
 #: admin/class-team-widget-cpt.php:32

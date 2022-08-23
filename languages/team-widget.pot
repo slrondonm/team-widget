@@ -1,0 +1,87 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Team Widget\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-08-23 00:15+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: \n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.6.2; wp-6.0.1\n"
+"X-Domain: team-widget"
+
+#. %s: title
+#: admin/class-team-widget-cpt.php:40
+#, php-format
+msgid "Add New %s"
+msgstr ""
+
+#. %s: title
+#: admin/class-team-widget-cpt.php:56
+#, php-format
+msgid "All %s"
+msgstr ""
+
+#. %s: title
+#: admin/class-team-widget-cpt.php:44
+#, php-format
+msgid "Edit %s"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "https://github.com/slrondonm"
+msgstr ""
+
+#. URI of the plugin
+msgid "https://github.com/slrondonm/team-widget"
+msgstr ""
+
+#: admin/class-team-widget-metabox.php:98
+msgid "Member Team Information"
+msgstr ""
+
+#. %s: title
+#: admin/class-team-widget-cpt.php:36
+#, php-format
+msgid "New %s"
+msgstr ""
+
+#. %s: title
+#: admin/class-team-widget-cpt.php:52
+#, php-format
+msgid "Search %s"
+msgstr ""
+
+#. Author of the plugin
+msgid "Sergio Lankaster Rondón Melo"
+msgstr ""
+
+#. Name of the plugin
+msgid "Team Widget"
+msgstr ""
+
+#: admin/class-team-widget-admin.php:121
+msgid "Team Widget Options"
+msgstr ""
+
+#: admin/class-team-widget-admin.php:120
+msgid "Team Widget Test Options"
+msgstr ""
+
+#. Description of the plugin
+msgid ""
+"This is a short description of what the plugin does. It's displayed in the "
+"WordPress admin area."
+msgstr ""
+
+#. %s: title
+#: admin/class-team-widget-cpt.php:48
+#, php-format
+msgid "View %s"
+msgstr ""

@@ -2,13 +2,27 @@
 /**
  * The Custom Post Type specific functionality of the plugin.
  *
- * @link       https://gitlab.com/slrondonm
+ * @link       https://github.com/slrondonm
  * @since      1.0.0
  *
  * @package    Team_Widget
  * @subpackage Team_Widget/admin
  */
 
+// If this file is called directly, abort.
+if ( ! defined( 'ABSPATH' ) ) {
+	die( '-1' );
+}
+
+/**
+ * The admin - specific functionality of the plugin .
+ *
+ * Defines Meta Box for Custom Post Type.
+ *
+ * @package    Team_Widget
+ * @subpackage Team_Widget/admin
+ * @author     Sergio Lankaster Rondón Melo <sl.rondon.m@gmail.com>
+ */
 class Team_Widget_Metabox {
 
 	/**
@@ -107,19 +121,18 @@ class Team_Widget_Metabox {
 	/**
 	 * Function metabox_callback
 	 *
-	 * @param int $post post id.
+	 * @param var $post post id.
 	 * @return void
 	 */
 	public function metabox_callback( $post ) {
 		wp_nonce_field( 'team_widget_data', 'team_widget_nonce' );
-		// echo 'Member Team Information';
 		$this->field_generator( $post );
 	}
 
 	/**
 	 * Function field_generator
 	 *
-	 * @param int $post post id.
+	 * @param var $post $post_id.
 	 * @return void
 	 */
 	public function field_generator( $post ) {
@@ -129,7 +142,11 @@ class Team_Widget_Metabox {
 
 			$label = '<label for="' . $meta_field['id'] . '">' . $meta_field['label'] . '</label>';
 
-			$meta_value = get_post_meta( $post->ID, $meta_field['id'], true );
+			$meta_value = get_post_meta(
+				$post->ID,
+				$meta_field['id'],
+				true
+			);
 
 			if ( empty( $meta_value ) ) {
 				if ( isset( $meta_field['default'] ) ) {
@@ -141,7 +158,7 @@ class Team_Widget_Metabox {
 				case 'textarea':
 					$input = sprintf(
 						'<textarea %s id="%s" name="%s" rows="5">%s</textarea>',
-						$meta_field['type'] !== 'color' ? 'style="width: 100%"' : '',
+						'color' !== $meta_field['type'] ? 'style="width: 100%"' : '',
 						$meta_field['id'],
 						$meta_field['id'],
 						$meta_value
@@ -151,7 +168,7 @@ class Team_Widget_Metabox {
 				default:
 					$input = sprintf(
 						'<input %s id="%s" name="%s" type="%s" value="%s">',
-						$meta_field['type'] !== 'color' ? 'style="width: 100%"' : '',
+						'color' !== $meta_field['type'] ? 'style="width: 100%"' : '',
 						$meta_field['id'],
 						$meta_field['id'],
 						$meta_field['type'],
@@ -160,7 +177,7 @@ class Team_Widget_Metabox {
 			}
 			$output .= $this->format_rows( $label, $input );
 		}
-		echo '<table class="form-table"><tbody>' . $output . '</tbody></table>';
+		echo '<table class="form-table"><tbody>' . esc_html( $output ) . '</tbody></table>';
 	}
 
 	/**
@@ -177,14 +194,15 @@ class Team_Widget_Metabox {
 	/**
 	 * Function saved_fields
 	 *
-	 * @param int $post_id ID Post.
+	 * @param var $post_id ID Post.
 	 * @return mixed
 	 */
 	public function save_fields( $post_id ) {
+
 		if ( ! isset( $_POST['team_widget_nonce'] ) ) {
 			return $post_id;
 		}
-		$nonce = $_POST['team_widget_nonce'];
+		$nonce = sanitize_text_field( wp_unslash( $_POST['team_widget_nonce'] ) );
 		if ( ! wp_verify_nonce( $nonce, 'team_widget_data' ) ) {
 			return $post_id;
 		}
@@ -195,14 +213,14 @@ class Team_Widget_Metabox {
 			if ( isset( $_POST[ $meta_field['id'] ] ) ) {
 				switch ( $meta_field['type'] ) {
 					case 'email':
-						$_POST[ $meta_field['id'] ] = sanitize_email( $_POST[ $meta_field['id'] ] );
+						$_POST[ $meta_field['id'] ] = sanitize_email( wp_unslash( $_POST[ $meta_field['id'] ] ) );
 						break;
 					case 'text':
-						$_POST[ $meta_field['id'] ] = sanitize_text_field( $_POST[ $meta_field['id'] ] );
+						$_POST[ $meta_field['id'] ] = sanitize_text_field( wp_unslash( $_POST[ $meta_field['id'] ] ) );
 						break;
 				}
-				update_post_meta( $post_id, $meta_field['id'], $_POST[ $meta_field['id'] ] );
-			} elseif ( $meta_field['type'] === 'checkbox' ) {
+				update_post_meta( $post_id, $meta_field['id'], sanitize_text_field( wp_unslash( $_POST[ $meta_field['id'] ] ) ) );
+			} elseif ( 'checkbox' === $meta_field['type'] ) {
 				update_post_meta( $post_id, $meta_field['id'], '0' );
 			}
 		}

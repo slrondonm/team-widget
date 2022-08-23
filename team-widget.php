@@ -7,17 +7,17 @@
  * registers the activation and deactivation functions, and defines a function
  * that starts the plugin.
  *
- * @link              https://gitlab.com/slrondonm
+ * @link              https://github.com/slrondonm
  * @since             1.2.1
  * @package           Team_Widget
  *
  * @wordpress-plugin
  * Plugin Name:       Team Widget
- * Plugin URI:        https://gitlab.com/slrondonm/team-widget
+ * Plugin URI:        https://github.com/slrondonm/team-widget
  * Description:       This is a short description of what the plugin does. It's displayed in the WordPress admin area.
  * Version:           1.2.1
  * Author:            Sergio Lankaster Rondón Melo
- * Author URI:        https://gitlab.com/slrondonm
+ * Author URI:        https://github.com/slrondonm
  * License:           GPL-2.0+
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
  * Text Domain:       team-widget
@@ -49,8 +49,9 @@ define( 'TEAM_WIDGET_DIR', $dir_path );
  * This action is documented in includes/class-team-widget-activator.php
  */
 function activate_team_widget() {
-	require_once $dir_path
-	. '/includes/class-team-widget-activator.php';
+	require_once plugin_dir_path( __FILE__ )
+
+	. 'includes/class-team-widget-activator.php';
 	Team_Widget_Activator::activate();
 }
 
@@ -59,8 +60,8 @@ function activate_team_widget() {
  * This action is documented in includes/class-team-widget-deactivator.php
  */
 function deactivate_team_widget() {
-	require_once $dir_path
-	. '/includes/class-team-widget-deactivator.php';
+	require_once plugin_dir_path( __FILE__ )
+	. 'includes/class-team-widget-deactivator.php';
 	Team_Widget_Deactivator::deactivate();
 }
 
@@ -88,7 +89,7 @@ if ( is_admin() ) {
  * The core plugin class that is used to define internationalization,
  * admin-specific hooks, and public-facing site hooks.
  */
-require $dir_path . '/includes/class-team-widget.php';
+require plugin_dir_path( __FILE__ ) . '/includes/class-team-widget.php';
 
 /**
  * Begins execution of the plugin.

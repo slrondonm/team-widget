@@ -2,7 +2,7 @@
 /**
  * The admin-specific functionality of the plugin.
  *
- * @link       https://gitlab.com/slrondonm
+ * @link       https://github.com/slrondonm
  * @since      1.0.0
  *
  * @package    Team_Widget
@@ -76,8 +76,6 @@ class Team_Widget_Admin {
 		 * class.
 		 */
 
-		wp_enqueue_style( 'bootstrap_css', 'https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css', array(), '4.1.3' );
-
 		wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/team-widget-admin.css', array(), $this->version, 'all' );
 	}
 
@@ -98,10 +96,6 @@ class Team_Widget_Admin {
 		 * between the defined hooks and the functions defined in this
 		 * class.
 		 */
-
-		wp_enqueue_script( 'popper_js', 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js', array(), '1.14.3', true );
-
-		wp_enqueue_script( 'bootstrap_js', 'https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js', array( 'jquery', 'popper_js' ), '4.1.3', true );
 
 		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/team-widget-admin.js', array( 'jquery' ), $this->version, true );
 	}
